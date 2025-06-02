@@ -1,0 +1,58 @@
+@media(max-width:456px){
+
+  .container{
+    padding: 0;
+  }
+  .header ul{
+    padding: 0 10px;
+  }
+    
+    .banner{
+        flex-direction: column;
+        gap: 0;
+        /* width: 100%; */
+    }
+
+    .ba_img{
+        width: 100%;
+        background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/blog-content/About%20Section.png?raw=true');
+    }
+
+    .slogan{
+        padding: 48px 12px;
+        width: 100%;
+    }
+
+
+    /* body區塊 */
+
+    h2, h3, p, .imgbox, .summary, .suggestion{
+    margin: 0 12px;
+  }
+  .imgbox{
+    height: 320px;
+    max-width: 351px;
+    text-align: center;
+  }
+  .imgbox1{
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/blog-content/content1.png?raw=true");
+  }
+  
+  .imgbox2{
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/blog-content/content3.png?raw=true");
+  }
+  
+  ol, .disc{
+    margin-left: 2em;
+  }
+
+
+  /* 表尾 */
+  .ei{
+    display: none;
+  }
+
+
+}
+
+

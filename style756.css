@@ -1,0 +1,11 @@
+@media(max-width: 756px){
+
+    .container{
+        padding: 0 10px;
+    }
+
+
+    .email{
+  font-size: 22px;
+}
+}
