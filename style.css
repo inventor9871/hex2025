@@ -149,7 +149,7 @@ body {
 
 * {
     box-sizing: border-box;
-
+    /* outline: 1px solid red; */
 }
 
 .header ul {
@@ -172,6 +172,115 @@ a {
     color: #0027D5;
 }
 
+
+
+.blog {
+    display: flex;
+}
+
+.search {
+    position: relative;
+    max-width: 1296px;
+    margin: 0 auto;
+    /* margin-right: 10px; */
+}
+
+.search input {
+    border-radius: 40px;
+    padding: 16px 48px 16px 2.5em;
+    /* margin-right: 10px; */
+}
+
+.search i {
+    position: absolute;
+    top: 50%;
+    left: 1em;
+    transform: translateY(-50%);
+}
+
+.card_body {
+    max-width: 1296px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.card {
+    max-width: 416px;
+    margin: 40px 0;
+    /* border: 1px solid #ddd; */
+}
+
+.card>img {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.tags {
+    display: flex;
+    color: blue;
+    padding-right: 8px;
+    font-size: 24px;
+    align-items: center;
+    /* gap: 4px; */
+}
+
+.tag {
+    padding-right: 8px;
+}
+
+.card>h2 {
+    color: black;
+}
+
+.popular {
+    background-color: blue;
+    color: white;
+    border-radius: 40px;
+    padding: 6px 12px;
+}
+
+.card>a {
+    border: 1px solid #333;
+    border-radius: 40px;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 16px;
+
+    &:hover {
+        background-color: black;
+        color: white;
+    }
+}
+
+.blog_img {
+    width: 50%;
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section.png?raw=true");
+    height: calc(100vh - 90px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.blog_txt {
+    width: 50%;
+    padding: 0 0 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bigword {
+    font-size: 120px;
+    color: blue;
+    font-weight: 900;
+}
+
+
 .ba_img {
     height: 640px;
     width: 50%;
@@ -187,6 +296,7 @@ a {
     border-top: 1px solid #6C757D;
     border-bottom: 1px solid #6C757D;
     gap: 24px;
+    margin: 0 0 80px 0;
 
 }
 
@@ -197,7 +307,7 @@ a {
     width: 50%;
 }
 
-.tag {
+.slogan_tag {
     font-size: 24px;
     display: flex;
     flex-wrap: wrap;
@@ -223,7 +333,7 @@ h1 {
     margin: 0 auto;
 }
 
-.item > li {
+.item>li {
     margin-bottom: 48px;
 }
 
@@ -283,77 +393,103 @@ ol {
 }
 
 
-.page{
-  display: flex;
-  justify-content: space-between;
+.page {
+    display: flex;
+    justify-content: space-between;
 }
 
-.page a{
-  padding: 8px 16px;
-  text-decoration: none;
-  color: #000;
-  border: 1px solid #000;
-  border-radius: 40px;
-  margin-bottom: 80px;
+.page a {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 40px;
+    /* margin-bottom: 80px; */
 }
 
-.ei{
-  border-top: 1px solid #6C757D;
-  padding: 80px 0;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.pagination .page,
+.pagination .arrow {
+    &:hover {
+        background: #d6e6ff;
+        color: #1a5ddc;
+        cursor: pointer;
+    }
+
+    &:active {
+        background: #d6e6ff;
+        transform: scale(2);
+        color: red;
+    }
 }
 
-.email{
-  font-size: 32px;
+.pagination {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #fff;
+    padding: 6px 14px;
+    border-radius: 40px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
-.email a{
-  text-decoration: none;
-  color: #000;
+.pagination a {
+    text-decoration: none;
 }
 
-.icons{
-  color: #0027D5;
-  display: flex;
-  gap: 12px;
-  font-size: 24px;
+.pagination .page,
+.pagination .arrow,
+.pagination .dots {
+    padding: 4px 8px;
+    color: #444;
+    border-radius: 6px;
 }
 
-.copyright{
-  text-align: center;
-  padding: 24px 0;
-  background-color: #fff;
+.pagination .page.active {
+    color: #1a5ddc;
+    font-weight: bold;
+    background-color: #e6f0ff;
+}
+
+.pagination .dots {
+    cursor: default;
+    color: #987;
+
+    &:hover {
+        transform: scale(2);
+    }
 }
 
 
+.ei {
+    border-top: 1px solid #6C757D;
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
+.email {
+    font-size: 32px;
+}
 
+.email a {
+    text-decoration: none;
+    color: #000;
+}
 
+.icons {
+    color: #0027D5;
+    display: flex;
+    gap: 12px;
+    font-size: 24px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.copyright {
+    text-align: center;
+    padding: 24px 0;
+    background-color: #fff;
+}
